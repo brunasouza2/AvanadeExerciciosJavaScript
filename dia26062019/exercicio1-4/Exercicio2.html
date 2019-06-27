@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+    <p>Exercicio 3 - Penerinha:</p>
+    <p id="demo2"></p>
+
+    <script>
+        function destroyer(args, ...arguments) {
+            var result = "";
+            var myMap = new Map();
+            for (var i = 0; i < arguments.length; i++) {
+                myMap.set(arguments[i], arguments[i]);
+            }
+            for (var i = 0; i < args.length; i++) {
+                var value = args[i];
+                if (!myMap.has(value)) {
+                    result = result + value + ", ";
+                }
+            }
+            alert(result);
+            return result;
+        }
+        document.getElementById("demo2").innerHTML = destroyer([2, 3, 2, 3], 2, 3);
+    </script>
+
+</body>
+</html>

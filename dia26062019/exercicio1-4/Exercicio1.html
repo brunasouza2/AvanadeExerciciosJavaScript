@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function sumALL(v1, v2) {
+            var result = 0;
+            if (v1 < v2) {
+                for (var i = v1; i <= v2; i++) {
+                    result += i;
+                }
+            } else {
+                for (var i = v1; i >= v2; i--) {
+                    result += i;
+                }
+            }            
+            alert(result);
+        }
+        function sumALL2(){
+            var valor1 = document.getElementById("valor1").value;
+            var valor2 = document.getElementById("valor2").value;
+            sumALL(parseInt(valor1),parseInt(valor2));
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="valor1" />
+    <input type="text" id="valor2" />
+    <input type="button" onclick="sumALL2()" value="Exibir Alert" />
+</body>
+</html>

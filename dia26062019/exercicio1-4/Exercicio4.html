@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<body>
+    <p>Exercicio 4 - Penerinha Refinada:</p>
+    <p id="demo"></p>
+
+    <script>
+        function Pessoa(nome) {
+            this.nome = nome;
+        }
+
+        function Professor(nome) {
+            Pessoa.call(this, nome);
+            this.ensinar = function (materia) {
+                console.log(this.nome + " está ensinando "+ materia);
+            }
+        }
+
+        Professor.prototype = new Pessoa();
+        Professor.prototype.constructor = Professor;
+
+        var p1 = new Professor("Amanda");
+        p1.ensinar("Geografia");
+    </script>
+</body>
+</html>

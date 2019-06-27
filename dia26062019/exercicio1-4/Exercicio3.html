@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<body>
+    <p>Exercicio 4 - Penerinha Refinada:</p>
+    <p id="demo"></p>
+
+    <script>
+        function dropElements(args, func) {
+            var result = "";
+            
+            for (var i = 0; i < args.length; i++) {
+                var value = args[i];
+                if (func(value)){
+                    result = result + value + ", ";
+                }
+            }
+            return result;
+        }
+        var func1 = function (n) { return n >= 3; };
+        var func2 = function (n) { return n === 1; };
+        var func3 = function (n) { return n > 0; };
+        var func4 = function (n) { return n > 5; };
+        var func5 = function (n) { return n > 3; };
+        var func6 = function (n) { return n > 2; };
+        document.getElementById("demo").innerHTML = dropElements([1,2,3,9,2], func6);
+    </script>
+</body>
+</html>
